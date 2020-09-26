@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Video = ({title, description, video_url, image_url}) => {
+const Video = ({title, channel, date, description, video_url, image_url}) => {
     return (
         <div className="card" /* onClick={() => window.open(video_url)} */>
             <div className="image">
@@ -9,6 +9,7 @@ const Video = ({title, description, video_url, image_url}) => {
             </div>
             <div className="content">
                 <span className="title">{title}</span>
+                <span className="subtitle">{channel} | {date}</span>
                 <span className="description">{description}</span>
             </div>
         </div>

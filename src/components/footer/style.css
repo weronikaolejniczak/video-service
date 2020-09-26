@@ -3,8 +3,8 @@ footer {
     bottom: 0;
     height: 100px;
     width: 100%;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #eeeeee;
+    color: #000000;
     /* layout */
     display: flex;
     align-items: center;

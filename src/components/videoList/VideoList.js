@@ -23,6 +23,8 @@ const VideoList = () => {
                         return <Video
                             key={key}
                             title={video.title}
+                            channel={video.channel}
+                            date={video.date}
                             description={video.description}
                             video_url={video.video_url}
                             image_url={video.image_url}

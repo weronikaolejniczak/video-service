@@ -1,0 +1,25 @@
+.card {
+    height: 400px;
+    width: 400px;
+    background-color: #eeeeee;
+    box-shadow: 2px 1px 5px #cccccc;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card .description {
+    font-size: 14px;
+    color: #444444;
+    margin-top: 5px;
+}

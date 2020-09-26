@@ -1,0 +1,14 @@
+header {
+    height: 100px;
+    background-color: #000000;
+    color: #ffffff;
+    /* layout */
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.site-name {
+    font-size: 25px;
+}

@@ -20,11 +20,11 @@ footer .content .author-name {
 }
 
 footer .content a {
-    color: #ff9100;
+    color: #bb0000;
     text-decoration: none;
 }
 
 footer .content a:hover {
-    color: #ffc400;
+    color: #db0000;
     text-decoration: none;
 }

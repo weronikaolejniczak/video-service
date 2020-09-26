@@ -1,78 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Video} from '../';
 import './style.css';
+import database from '../../data/database';
 
 const VideoList = () => {
-    return (
-        <div className="video-list">
-            <Video 
-                title={"Mój ulubiony filmik 1"}
-                description={"Opis mojego ulubionego filmiku"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 2"}
-                description={"Opis mojego ulubionego filmiku 2"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-            <Video 
-                title={"Mój ulubiony filmik 3"}
-                description={"Opis mojego ulubionego filmiku 3"}
-                video_url={"https://www.youtube.com/watch?v=pfU0QORkRpY"}
-                image_url={"https://images.unsplash.com/photo-1600959907703-125ba1374a12"}
-            />
-        </div>
-    );
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+        setVideos(database);
+    }, []);
+
+    if (!videos) {
+        return (
+            <div className="loading">
+                Loading...
+            </div>
+        );
+    } else {
+        return (
+            <div className="video-list">
+                {videos.map((video, key) => {
+                        return <Video
+                            key={key}
+                            title={video.title}
+                            description={video.description}
+                            video_url={video.video_url}
+                            image_url={video.image_url}
+                        />
+                    })
+                }
+            </div>
+        );
+    }
 }
 
 export default VideoList;

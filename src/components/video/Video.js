@@ -3,7 +3,7 @@ import './style.css';
 
 const Video = ({title, description, video_url, image_url}) => {
     return (
-        <div className="card">
+        <div className="card" /* onClick={() => window.open(video_url)} */>
             <div className="image">
                 <img src={image_url} width={300} alt="" />
             </div>

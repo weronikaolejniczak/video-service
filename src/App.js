@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header} from './components'
+import {Header, Footer} from './components'
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header />
       {/* <Body /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

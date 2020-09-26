@@ -5,7 +5,14 @@
     border-radius: 50px;
 }
 
-.switch-track .thumb {
+.dark-switch-track {
+    width: 80px;
+    height: 30px;
+    background-color: #444444;
+    border-radius: 50px;
+}
+
+.thumb {
     position: relative;
     top: 2px;
     left: 2px;
@@ -15,7 +22,7 @@
     border-radius: 50px;
 }
 
-.switch-track .active-thumb {
+.active-thumb {
     position: relative;
     top: 2px;
     left: 52px;

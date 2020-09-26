@@ -10,8 +10,7 @@ const Switch = ({theme, setTheme}) => {
     };
 
     return (
-        <div className="switch-track" onClick={toggleSwitch}>
-            {console.log('darkActive: ', darkActive)}
+        <div className={darkActive ? "dark-switch-track" : "switch-track"} onClick={toggleSwitch}>
             <div className={darkActive ? "active-thumb" : "thumb"} />
         </div>
     );

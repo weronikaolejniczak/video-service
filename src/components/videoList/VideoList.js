@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Video} from '../';
+import {Video, Player} from '../';
 import './style.css';
 import database from '../../data/database';
 
 const VideoList = ({theme}) => {
     const [videos, setVideos] = useState([]);
+    const [selectedVideo, setSelectedVideo] = useState(null);
 
     useEffect(() => {
         setVideos(database);
@@ -16,19 +17,17 @@ const VideoList = ({theme}) => {
                 Loading...
             </div>
         );
+    } else if (!!selectedVideo) {
+        return <Player theme={theme} video={selectedVideo} setSelectedVideo={setSelectedVideo} />
     } else {
         return (
             <div className="video-list">
                 {videos.map((video, key) => {
                         return <Video
                             key={key}
-                            title={video.title}
-                            channel={video.channel}
-                            date={video.date}
-                            description={video.description}
-                            video_url={video.video_url}
-                            image_url={video.image_url}
+                            video={video}
                             theme={theme}
+                            setSelectedVideo={setSelectedVideo}
                         />
                     })
                 }

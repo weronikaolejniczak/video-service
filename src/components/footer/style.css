@@ -5,6 +5,9 @@ footer {
     width: 100%;
     background-color: #eeeeee;
     color: #000000;
+    /* layout */
+    display: flex;
+    align-items: center;
 }
 
 .dark-footer {
@@ -16,21 +19,21 @@ footer {
     color: #eeeeee;
 }
 
-footer .content {
+footer .footer-content {
     padding-left: 50px;
     padding-right: 50px;
 }
 
-footer .content .author-name {
+footer .footer-content .author-name {
     font-weight: bold;
 }
 
-footer .content a {
+footer .footer-content a {
     color: #bb0000;
     text-decoration: none;
 }
 
-footer .content a:hover {
+footer .footer-content a:hover {
     color: #db0000;
     text-decoration: none;
 }

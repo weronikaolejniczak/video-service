@@ -14,3 +14,17 @@ footer .content {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+footer .content .author-name {
+    font-weight: bold;
+}
+
+footer .content a {
+    color: #ff9100;
+    text-decoration: none;
+}
+
+footer .content a:hover {
+    color: #ffc400;
+    text-decoration: none;
+}

@@ -3,7 +3,7 @@ import {Video} from '../';
 import './style.css';
 import database from '../../data/database';
 
-const VideoList = () => {
+const VideoList = ({theme}) => {
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
@@ -28,6 +28,7 @@ const VideoList = () => {
                             description={video.description}
                             video_url={video.video_url}
                             image_url={video.image_url}
+                            theme={theme}
                         />
                     })
                 }

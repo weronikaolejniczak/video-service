@@ -1,6 +1,6 @@
 .card {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 360px;
     background-color: #eeeeee;
     box-shadow: 0px 1px 3px #cccccc;
     border-radius: 35px;
@@ -12,11 +12,24 @@
     align-items: center;
 }
 
-.card .image {
+.dark-card {
+    height: 350px;
+    width: 360px;
+    background-color: #000000;
+    border-radius: 35px;
+    margin: 20px;
+    overflow: hidden;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
     display: flex;
 }
 
-.card .content {
+.content {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -25,7 +38,7 @@
     overflow: hidden;
 }
 
-.card .title {
+.title {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
@@ -35,12 +48,16 @@
     text-overflow: ellipsis;
 }
 
-.card .subtitle {
+.subtitle {
     color: #444444;
     font-size: 15px;
 }
 
-.card .description {
+.dark-card .subtitle {
+    color: #777777;
+}
+
+.description {
     margin-top: 10px;
     width: 270px;
     white-space: nowrap;

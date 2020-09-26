@@ -2,10 +2,10 @@ import React from 'react';
 import {VideoList} from '../';
 import './style.css';
 
-const Main = () => {
+const Main = ({theme}) => {
     return (
-        <main>
-            <VideoList />
+        <main className={theme === 'dark' ? 'dark-main' : null}>
+            <VideoList theme={theme} />
         </main>
     );
 }

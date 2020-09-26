@@ -5,9 +5,15 @@ footer {
     width: 100%;
     background-color: #eeeeee;
     color: #000000;
-    /* layout */
-    display: flex;
-    align-items: center;
+}
+
+.dark-footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #eeeeee;
 }
 
 footer .content {

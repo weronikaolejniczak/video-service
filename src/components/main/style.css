@@ -5,3 +5,8 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.dark-main {
+    background-color: #111111;
+    color: #eeeeee;
+}

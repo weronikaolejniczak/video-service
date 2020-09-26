@@ -5,9 +5,16 @@ header {
     /* layout */
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
 }
+
+.dark-header {
+    background-color: #111111;
+    color: #eeeeee;
+}
+
 
 .site-name {
     font-size: 30px;

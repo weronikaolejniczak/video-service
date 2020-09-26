@@ -6,10 +6,10 @@ function App() {
   const [theme, setTheme] = useState('light');
 
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+    <div className={theme === 'dark' ? "dark-app" : "app"}>
+      <Header theme={theme} setTheme={setTheme} />
+      <Main theme={theme} />
+      <Footer theme={theme} />
     </div>
   );
 }
